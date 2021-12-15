@@ -45,12 +45,12 @@ describe('Park', function() {
   it('should be able to add a dinosaur to its collection', function() {
     const actual = park.dinosaurs.push(ornithopod).toString();
     list = list.push(ornithopod).toString();
-    assert.equal(actual, list);
+    assert.strictEqual(actual, list);
   });
 
   it('should be able to remove a dinosaur from its collection', function() {
     const actual = park.dinosaurs.filter(x => x !== ornithopod).toString();
-    assert.equal(actual, list.toString())
+    assert.strictEqual(actual, list.toString())
   });
 
   it('should be able to find the dinosaur that attracts the most visitors', function () {
@@ -63,7 +63,7 @@ describe('Park', function() {
       };
     };
     const actual = dinosaur;
-    assert.deepEqual(actual, tyrannosaur);
+    assert.strictEqual(actual, tyrannosaur);
   });
 
   it('should be able to find all dinosaurs of a particular species', function(){
@@ -79,7 +79,11 @@ describe('Park', function() {
     assert.strictEqual(actual, test.toString());
   });
 
-  it('should be able to calculate the total number of visitors per day');
+  it('should be able to calculate the total number of visitors per day', function(){
+
+
+
+  });
 
   it('should be able to calculate the total number of visitors per year');
 
